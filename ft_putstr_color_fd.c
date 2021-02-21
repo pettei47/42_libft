@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_putstr_color_fd.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/17 08:57:43 by tkitagaw          #+#    #+#             */
-/*   Updated: 2021/02/07 02:10:48 by teppei           ###   ########.fr       */
+/*   Created: 2021/02/21 17:28:26 by teppei            #+#    #+#             */
+/*   Updated: 2021/02/21 17:29:41 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **l, t_list *n)
+void	ft_putstr_color_fd(char *s, char *color, int fd)
 {
-	while (*l != NULL)
-		l = &((*l)->next);
-	*l = n;
-}
-
-#include <stdio.h>
-int		main()
-{
-	t_list	*l;
-	t_list	*l0;
-
-	l = ft_lstnew("aa");
-	l0 = ft_lstnew("b");
-	ft_lstadd_back(&l, l0);
-	printf("%s\n", l->next->content);
+	ft_putstr_fd(color, fd);
+	ft_putstr_fd(s, fd);
+	ft_putstr_fd(RESET, fd);
 }

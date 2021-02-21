@@ -3,24 +3,44 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkitagaw <tkitagaw@student.42.jp>          +#+  +:+       +#+        */
+/*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 19:13:52 by tkitagaw          #+#    #+#             */
-/*   Updated: 2020/07/15 23:22:03 by tkitagaw         ###   ########.fr       */
+/*   Updated: 2021/02/21 17:28:22 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# define RESET			"\033[0m"
+# define BOLD			"\033[1m"
+# define BLACK			"\033[30m"
+# define RED			"\033[31m"
+# define GREEN			"\033[32m"
+# define YELLOW			"\033[33m"
+# define BLUE			"\033[34m"
+# define MAGENTA		"\033[35m"
+# define CYAN			"\033[36m"
+# define WHITE			"\033[37m"
+# define BOLDBLACK		"\033[1m\033[30m"
+# define BOLDRED		"\033[1m\033[31m"
+# define BOLDGREEN		"\033[1m\033[32m"
+# define BOLDYELLOW		"\033[1m\033[33m"
+# define BOLDBLUE		"\033[1m\033[34m"
+# define BOLDMAGENTA	"\033[1m\033[35m"
+# define BOLDCYAN		"\033[1m\033[36m"
+# define BOLDWHITE		"\033[1m\033[37m"
+
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct	s_list
+typedef struct		s_list
 {
 	void			*content;
 	struct s_list	*next;
-}				t_list;
+}					t_list;
 
 int				ft_atoi(char *src);
 void			ft_bzero(void *s, size_t n);
@@ -54,6 +74,7 @@ char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
+void			ft_putstr_color_fd(char *s, char *color, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 t_list			*ft_lstnew(void *content);
@@ -65,4 +86,6 @@ void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*d)(void *));
+void			ft_free_ptr(char **ptrs);
+
 #endif

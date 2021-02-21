@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_free_ptr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/17 08:57:43 by tkitagaw          #+#    #+#             */
-/*   Updated: 2021/02/07 02:10:48 by teppei           ###   ########.fr       */
+/*   Created: 2021/02/21 17:24:16 by teppei            #+#    #+#             */
+/*   Updated: 2021/02/21 17:35:21 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **l, t_list *n)
+void	free_ptr(char **ptrs)
 {
-	while (*l != NULL)
-		l = &((*l)->next);
-	*l = n;
-}
+	int	i;
 
-#include <stdio.h>
-int		main()
-{
-	t_list	*l;
-	t_list	*l0;
-
-	l = ft_lstnew("aa");
-	l0 = ft_lstnew("b");
-	ft_lstadd_back(&l, l0);
-	printf("%s\n", l->next->content);
+	i = 0;
+	while (ptrs[i])
+		free(ptrs[i++]);
+	free(ptrs);
 }
