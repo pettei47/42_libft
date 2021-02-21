@@ -6,13 +6,13 @@
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 17:24:16 by teppei            #+#    #+#             */
-/*   Updated: 2021/02/21 17:35:21 by teppei           ###   ########.fr       */
+/*   Updated: 2021/02/21 18:03:47 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	free_ptr(char **ptrs)
+void	ft_free_ptr(char **ptrs)
 {
 	int	i;
 
