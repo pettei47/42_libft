@@ -6,7 +6,7 @@
 #    By: teppei <teppei@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/30 17:42:38 by tkitagaw          #+#    #+#              #
-#    Updated: 2021/02/21 17:35:05 by teppei           ###   ########.fr        #
+#    Updated: 2021/02/21 23:36:22 by teppei           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,9 @@ SRCS	=	ft_atoi.c \
 			ft_tolower.c \
 			ft_toupper.c \
 			ft_free_ptr.c \
-			ft_putstr_color_fd.c
+			ft_putstr_color_fd.c \
+			ft_putstrs_fd.c \
+
 BONUS	=	ft_lstsize.c \
 			ft_lstnew.c \
 			ft_lstclear.c \
