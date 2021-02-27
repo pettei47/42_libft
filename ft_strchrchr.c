@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strfchr.c                                       :+:      :+:    :+:   */
+/*   ft_strchrchr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/23 23:16:20 by teppei            #+#    #+#             */
-/*   Updated: 2021/02/25 02:21:44 by teppei           ###   ########.fr       */
+/*   Created: 2021/02/25 02:36:26 by teppei            #+#    #+#             */
+/*   Updated: 2021/02/25 02:43:06 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strfchr(const char *s, int c)
+char	*ft_strchrchr(const char *s, char c1, char c2)
 {
 	char	*ret;
-	int		i;
 
 	ret = (char *)s;
-	i = 0;
-	while (s[i])
+	while (*ret)
 	{
-		if (s[i] == c)
-		{
-			ret[i] = '\0';
+		if (*ret == c1 && *(ret + 1) == c2)
 			return (ret);
-		}
-		i++;
+		ret++;
 	}
 	return (NULL);
 }

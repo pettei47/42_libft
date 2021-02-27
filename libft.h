@@ -6,7 +6,7 @@
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 19:13:52 by tkitagaw          #+#    #+#             */
-/*   Updated: 2021/02/23 23:20:34 by teppei           ###   ########.fr       */
+/*   Updated: 2021/02/25 02:43:31 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ size_t			ft_strlen(const char *s);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_strchr(const char *s, int c);
+char			*ft_strchrchr(const char *s, char c1, char c2);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strfchr(const char *s, int c);
 char			*ft_strnstr(const char	*big, const char *little, size_t len);
