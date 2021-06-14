@@ -6,7 +6,7 @@
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 00:47:26 by tkitagaw          #+#    #+#             */
-/*   Updated: 2021/06/14 14:55:38 by teppei           ###   ########.fr       */
+/*   Updated: 2021/06/14 15:17:25 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static char	*mkstr(char *s, char c, char *o)
 	return (o);
 }
 
-static char	*my_free(char **o)
+static char	**my_free(char **o)
 {
 	size_t	i;
 
