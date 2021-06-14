@@ -6,7 +6,7 @@
 #    By: teppei <teppei@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/30 17:42:38 by tkitagaw          #+#    #+#              #
-#    Updated: 2021/02/25 02:41:16 by teppei           ###   ########.fr        #
+#    Updated: 2021/06/14 15:28:20 by teppei           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ SRCS	=	ft_atoi.c \
 			ft_isalpha.c \
 			ft_isascii.c \
 			ft_isdigit.c \
+			ft_strdigit.c \
+			ft_ptrdigit.c \
 			ft_isprint.c\
 			ft_itoa.c \
 			ft_memccpy.c \

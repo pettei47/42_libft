@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_ptrdigit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/27 23:47:40 by tkitagaw          #+#    #+#             */
-/*   Updated: 2021/06/14 15:31:07 by teppei           ###   ########.fr       */
+/*   Created: 2021/06/14 15:30:19 by teppei            #+#    #+#             */
+/*   Updated: 2021/06/14 15:33:40 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_ptrdigit(char **p)
 {
-	if (47 < c && c < 58)
-		return (1);
-	else
-		return (0);
+	while (*p)
+	{
+		if (ft_strdigit(*p++) == 0)
+			return (0);
+	}
+	return (1);
 }

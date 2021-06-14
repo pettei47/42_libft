@@ -6,7 +6,7 @@
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 19:13:52 by tkitagaw          #+#    #+#             */
-/*   Updated: 2021/06/14 14:48:45 by teppei           ###   ########.fr       */
+/*   Updated: 2021/06/14 15:32:45 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ int				ft_strcmp(const char *s1, const char *s2);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
+int				ft_strdigit(char *s);
+int				ft_ptrdigit(char **p);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
 int				ft_toupper(int c);
