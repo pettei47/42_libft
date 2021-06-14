@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkitagaw <tkitagaw@student.42.jp>          +#+  +:+       +#+        */
+/*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 19:20:05 by tkitagaw          #+#    #+#             */
-/*   Updated: 2020/07/17 10:15:28 by tkitagaw         ###   ########.fr       */
+/*   Updated: 2021/06/14 14:46:32 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_chk(const char *str, const char *to_find)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] && to_find[i])
@@ -26,7 +26,7 @@ static int	ft_chk(const char *str, const char *to_find)
 	return (1);
 }
 
-char		*ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
 	size_t	i;
 	size_t	tmp;

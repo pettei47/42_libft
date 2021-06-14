@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkitagaw <tkitagaw@student.42.jp>          +#+  +:+       +#+        */
+/*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 00:47:26 by tkitagaw          #+#    #+#             */
-/*   Updated: 2020/07/17 22:04:16 by tkitagaw         ###   ########.fr       */
+/*   Updated: 2021/06/14 14:55:38 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static size_t	c_count(char const *s, char c)
 	return (count);
 }
 
-static char		*mkstr(char *s, char c, char *o)
+static char	*mkstr(char *s, char c, char *o)
 {
 	size_t	len;
 	size_t	i;
@@ -44,7 +44,8 @@ static char		*mkstr(char *s, char c, char *o)
 	i = 0;
 	while (s[len] != c && s[len])
 		len++;
-	if (!(o = (char *)malloc(sizeof(char) * (len + 1))))
+	o = (char *)malloc(sizeof(char) * (len + 1));
+	if (!o)
 		return (NULL);
 	while (i < len)
 	{
@@ -55,7 +56,7 @@ static char		*mkstr(char *s, char c, char *o)
 	return (o);
 }
 
-static void		my_free(char **o)
+static char	*my_free(char **o)
 {
 	size_t	i;
 
@@ -63,9 +64,10 @@ static void		my_free(char **o)
 	while (o[i])
 		free(o[i++]);
 	free(o);
+	return (NULL);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**outcome;
 	char	*str;
@@ -74,18 +76,17 @@ char			**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	str = (char *)s;
-	if (!(outcome = (char **)malloc(sizeof(char *) * (c_count(s, c)))))
+	outcome = (char **)malloc(sizeof(char *) * (c_count(s, c)));
+	if (!outcome)
 		return (NULL);
 	i = 0;
 	while (*str)
 	{
 		if (*str != c)
 		{
-			if (!(outcome[i] = mkstr(str, c, outcome[i])))
-			{
-				my_free(outcome);
-				return (NULL);
-			}
+			outcome[i] = mkstr(str, c, outcome[i]);
+			if (!outcome[i])
+				return (my_free(outcome));
 			str += ft_strlen(outcome[i++]) - 1;
 		}
 		str++;

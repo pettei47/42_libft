@@ -6,7 +6,7 @@
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 22:59:25 by teppei            #+#    #+#             */
-/*   Updated: 2021/02/21 23:38:00 by teppei           ###   ########.fr       */
+/*   Updated: 2021/06/14 15:03:03 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstrs_fd(char **strs, char c, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (strs[i])

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkitagaw <tkitagaw@student.42.jp>          +#+  +:+       +#+        */
+/*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 02:18:10 by tkitagaw          #+#    #+#             */
-/*   Updated: 2020/07/16 20:21:54 by tkitagaw         ###   ########.fr       */
+/*   Updated: 2021/06/14 15:01:15 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static size_t	digit(long a)
 	return (i);
 }
 
-static char		*ft_swap(char *s, size_t len)
+static char	*ft_swap(char *s, size_t len)
 {
 	char	tmp;
 	size_t	i;
@@ -50,7 +50,7 @@ static char		*ft_swap(char *s, size_t len)
 	return (s);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	long	a;
 	char	*out;
@@ -60,7 +60,8 @@ char			*ft_itoa(int n)
 	a = (long)n;
 	dig = digit(a);
 	i = 0;
-	if (!(out = (char *)ft_calloc(sizeof(char), (dig + 1))))
+	out = (char *)ft_calloc(sizeof(char), (dig + 1));
+	if (!out)
 		return (NULL);
 	if (a < 0)
 	{

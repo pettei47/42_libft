@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkitagaw <tkitagaw@student.42.jp>          +#+  +:+       +#+        */
+/*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:54:16 by tkitagaw          #+#    #+#             */
-/*   Updated: 2020/06/28 00:06:02 by tkitagaw         ###   ########.fr       */
+/*   Updated: 2021/06/14 15:00:36 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	chk_digit(int c)
 		return (0);
 }
 
-int			ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if (chk_alpha(c) || chk_digit(c))
 		return (1);

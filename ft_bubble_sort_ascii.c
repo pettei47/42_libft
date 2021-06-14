@@ -6,7 +6,7 @@
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 02:24:09 by teppei            #+#    #+#             */
-/*   Updated: 2021/02/23 02:31:11 by teppei           ###   ########.fr       */
+/*   Updated: 2021/06/14 14:58:24 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_bubble_sort_ascii(char **strs)
 {
 	int		i;
 	int		j;
-	
+
 	i = 0;
 	while (strs[i])
 	{
