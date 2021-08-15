@@ -6,7 +6,7 @@
 #    By: teppei <teppei@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/30 17:42:38 by tkitagaw          #+#    #+#              #
-#    Updated: 2021/06/14 15:28:20 by teppei           ###   ########.fr        #
+#    Updated: 2021/08/16 07:02:01 by teppei           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ SRCS	=	ft_atoi.c \
 			ft_strnstr.c \
 			ft_strrchr.c \
 			ft_strfchr.c \
+			ft_strchr_cnt.c \
 			ft_strtrim.c \
 			ft_substr.c \
 			ft_tolower.c \

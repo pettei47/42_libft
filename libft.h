@@ -6,7 +6,7 @@
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 19:13:52 by tkitagaw          #+#    #+#             */
-/*   Updated: 2021/06/14 15:32:45 by teppei           ###   ########.fr       */
+/*   Updated: 2021/08/16 07:01:14 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ char			*ft_strchr(const char *s, int c);
 char			*ft_strchrchr(const char *s, char c1, char c2);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strfchr(const char *s, int c);
+int				ft_strchr_cnt(char *s, char c);
 char			*ft_strnstr(const char	*big, const char *little, size_t len);
 int				ft_strncmp(const char *s1, const char *s2, size_t len);
 int				ft_strcmp(const char *s1, const char *s2);
