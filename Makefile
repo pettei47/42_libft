@@ -6,7 +6,7 @@
 #    By: teppei <teppei@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/30 17:42:38 by tkitagaw          #+#    #+#              #
-#    Updated: 2021/08/16 07:02:01 by teppei           ###   ########.fr        #
+#    Updated: 2021/08/28 13:12:59 by teppei           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,7 @@ OBJS	=	$(SRCS:.c=.o)
 BOBJS	=	$(BONUS:.c=.o)
 
 .c.o :
-	$(CC) $(CFLGS) -c $< -o $@ -I libft.h
+	$(CC) $(CFLGS) -c $< -o $@ -I ./
 
 all : $(NAME)
 
