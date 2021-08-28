@@ -6,7 +6,7 @@
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 10:56:13 by tkitagaw          #+#    #+#             */
-/*   Updated: 2021/06/14 15:00:27 by teppei           ###   ########.fr       */
+/*   Updated: 2021/08/28 13:08:40 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@ int	ft_atoi(const char *str)
 {
 	int				i;
 	int				sign;
-	int				len;
 	unsigned int	nbr;
 
 	i = 0;
 	sign = 1;
-	len = 0;
 	nbr = 0;
 	while (str[i] == ' ' || (8 < str[i] && str[i] < 14))
 		i++;
