@@ -6,7 +6,7 @@
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 19:13:52 by tkitagaw          #+#    #+#             */
-/*   Updated: 2021/08/16 07:01:14 by teppei           ###   ########.fr       */
+/*   Updated: 2021/10/09 13:18:14 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putstr_color_fd(char *s, char *color, int fd);
-void			ft_putstrs_fd(char **s, char c, int fd);
+void			ft_putstrs_fd(char **s, char *sep, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 t_list			*ft_lstnew(void *content);
