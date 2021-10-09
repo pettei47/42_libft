@@ -6,7 +6,7 @@
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 19:13:52 by tkitagaw          #+#    #+#             */
-/*   Updated: 2021/10/09 13:18:14 by teppei           ###   ########.fr       */
+/*   Updated: 2021/10/09 23:21:00 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,6 @@ void			ft_free_ptr(char **ptrs);
 char			**ft_ptrdup(char **strs);
 void			swap_str(char **strs, int i, int j);
 void			ft_bubble_sort_ascii(char **strs);
+void			ft_perror(char *str, char *err);
 
 #endif
