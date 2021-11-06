@@ -6,7 +6,7 @@
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 15:28:38 by teppei            #+#    #+#             */
-/*   Updated: 2021/06/15 22:42:48 by teppei           ###   ########.fr       */
+/*   Updated: 2021/11/06 14:50:35 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,22 @@
 
 int	ft_strdigit(char *s)
 {
-	if (*s == '-' || *s == '+')
-		s++;
-	while (*s)
+	long	i;
+	long	sign;
+
+	i = 0;
+	sign = 0;
+	if (s[i] == '-' || s[i] == '+')
 	{
-		if (ft_isdigit(*s++) == 0)
+		i++;
+		sign = 1;
+	}
+	while (s[i])
+	{
+		if (ft_isdigit(s[i++]) == 0)
 			return (0);
 	}
+	if (i == 0 || (i == 1 && sign == 1))
+		return (0);
 	return (1);
 }
