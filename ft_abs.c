@@ -6,13 +6,13 @@
 /*   By: teppei <teppei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 23:22:54 by teppei            #+#    #+#             */
-/*   Updated: 2021/10/09 23:23:19 by teppei           ###   ########.fr       */
+/*   Updated: 2021/12/25 17:19:31 by teppei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_abs(int a)
+long	ft_abs(long a)
 {
 	if (a < 0)
 		return (a * (-1));
